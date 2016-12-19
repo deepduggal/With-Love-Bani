@@ -1,0 +1,17 @@
+%html
+%head
+  %meta{:content => "width=device-width", :name => "viewport"}/
+  %title With Love, Bani
+  %link{:href => "css/index.css", :rel => "stylesheet", :type => "text/css"}/
+%body
+  %section.comingSoon
+    %h1
+      %span{:class=>"companyName"}
+        With Love, Bani
+      &nbsp;is coming soon.
+    %h4
+      Check out our Facebook page until we're ready for you.
+    %h2.countdownContainer
+      .countdown &nbsp;
+      %progress{:value=>"0"}
+  %script{:src=>"js/index.js"}

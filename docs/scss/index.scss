@@ -1,0 +1,48 @@
+html,body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #E91E63;
+  color: white;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  .comingSoon {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    h1 {
+      margin: 0;
+    }
+    h4, h2 {
+      margin: 0.5em;
+    }
+  }
+}
+
+.companyName {
+  font-style: italic;
+  text-decoration: underline;
+}
+$pink: #F06292;
+
+.countdownContainer {
+  height: 1em;
+  width: 100%;
+  text-align: center;
+  
+  .countdown {
+    width: calc(100% - 1em);
+    padding-bottom: 0.5em;
+  }
+  progress {
+    width: 75%;
+    height: 1em;
+    background: $pink;
+  }
+  progress::-webkit-progress-bar {
+    background: #343434;}
+  progress::-webkit-progress-value { background: $pink; }
+  progress::-moz-progress-bar { background: $pink; }
+}
