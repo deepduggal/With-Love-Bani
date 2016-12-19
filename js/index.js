@@ -8,7 +8,7 @@ progress.max = seconds*100;
 
 var timer = setInterval(function() {
   if(seconds === 0) {
-    location.href = 'http://facebook.com/withlovebani';
+    location.href = 'https://www.facebook.com/WithLoveBani/';
     clearInterval(timer);
   }
   else {
