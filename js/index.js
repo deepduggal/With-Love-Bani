@@ -1,24 +1,81 @@
-var countdown = document.body.getElementsByClassName('countdown')[0], 
-    progress = document.body.getElementsByTagName('progress')[0],
-    seconds = 5;
+var width = $('body').innerWidth(), 
+        slideshow;
 
-//init
-countdown.innerHTML = seconds;
-progress.max = seconds*100;
+window.onhashchange = function(){
+    var hash = document.location.hash, 
+          link = '';
 
-var timer = setInterval(function() {
-  if(seconds === 0) {
-    location.href = 'https://www.facebook.com/WithLoveBani/';
-    clearInterval(timer);
+    switch (hash) {
+      case '#portfolio':
+        link = 'portfolio.html';
+        break;
+      case '#about':
+        link = 'about.html';
+        break;
+      case '#contact':
+        link = 'contact.html';
+        break;
+      default:
+        link = '';
+        document.location.hash = '#portfolio';
+        break;
+    }
+
+    if(link !== '') {
+      $.ajax({
+         url: link,
+         global: false,
+         type: "GET",
+         dataType: "html",
+         beforeSend: function() {
+            // $('.loading').css('display', 'block');
+            // $('.main').css('display', 'none');
+            $('logo').toggleClass('animated pulse infinite');
+         },
+         error: function(xhr, textStatus, error) {
+            $('.main').html(textStatus);
+         },
+         success: function(data, textStatus, xhr) {
+            $('.main').html(data);
+         }, 
+         complete: function(xhr, textStatus) {
+            // $('.main').css('display', 'block');
+            // $('.loading').css('display', 'none');
+            $('logo').toggleClass('pulse infinite');
+         },
+       });
+    }
+}
+
+$('nav').click(function(event) {
+  event.preventDefault();
+  if(event.target.id === 'portfolio') {
+    if(document.location.hash !== '#portfolio') {
+        document.location.hash = '#portfolio';
+    }
   }
-  else {
-    seconds--;
-    countdown.innerHTML = seconds;
+  else if(event.target.id === 'about') {
+    //If new page is selected
+    if(document.location.hash !== '#about') {
+        document.location.hash = '#about';
+    }
+    clearInterval(slideshow);
   }
-}, 1000);
+  else if(event.target.id === 'contact') {
+    //If new page is selected
+    if(document.location.hash !== '#contact') {
+        document.location.hash = '#contact';
+    }
+    clearInterval(slideshow);
+  }
+})
 
-var smoothProgress = setInterval(function() {
-  progress.value += 1;
-}, 10);
-
-window.onload = timer();
+window.onload = function() {
+  window.onhashchange();
+}
+// //Touch Events
+// var hammertime = new Hammer(myElement, myOptions);
+// hammertime.on('swipe', function(event) {
+//   $(event.target).scrollLeft($('body').innerWidth());
+// });
+// hammertime.get('swipe').set({direction: Hammer.DIRECTION_HORIZONTAL});

@@ -1,0 +1,56 @@
+:css
+  .about {
+    height: 100%;
+    width: 100%;
+  }
+  .about > .baniImg {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+  }
+  .about > .baniImg > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 7.5%;
+    -moz-transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+
+  }
+  .about > .baniImg > img:hover {
+    -moz-transition: all 20s;
+    -webkit-transition: all 20s;
+    transition: all 20s;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2); 
+  }
+  .about > .baniText {
+    height: 100%;
+    width: 50%;
+    float: left;
+    overflow: auto;
+  }
+  .about > .baniText > h1 {
+    margin: 0.5em;
+  }
+  .about > .baniText > h1 > em {
+      font-family: 'Pacifico', cursive;
+  }
+%section.about.animated.fadeIn
+  .baniImg
+    %img{:src=>"res/img/about_bani.jpg", :alt=>"Bani Duggal, creator of With Love, Bani"}
+  .baniText
+    %h1 
+      %em With Love, Bani
+      %span &nbsp;is a modern fashion agency that specializes in creating unique custom apparel solutions. 
+      %br
+      %br
+      %em &nbsp;&nbsp;With Love, Bani
+      %span &nbsp;was created by Bani Duggal. 

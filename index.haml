@@ -2,16 +2,23 @@
   %head
     %meta{:content => "width=device-width", :name => "viewport"}/
     %title With Love, Bani
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato|Pacifico", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "css/index.css", :rel => "stylesheet", :type => "text/css"}/
   %body
-    %section.comingSoon
-      %h1
-        %span{:class=>"companyName"}
-          With Love, Bani
-        &nbsp;is coming soon.
-      %h4
-        Check out our Facebook page until we're ready for you.
-      %h2.countdownContainer
-        .countdown &nbsp;
-        %progress{:value=>"0"}
-    %script{:src=>"js/index.js"}
+    %nav
+      %h1.logo With Love, Bani
+      %a#portfolio Portfolio
+      &nbsp;/&nbsp;
+      %a#about About
+      &nbsp;/&nbsp;
+      %a#contact Contact
+    %section.loading.animated.fadeIn
+      %h1.animated.fadeIn
+        .text.animated.slideInLeft With&nbsp;
+        .text.animated.slideInDown Love,
+        .text.animated.slideInRight Bani
+    .main.animated.fadeIn
+    %script{:src=>"js/jquery-3.1.1.min.js"}
+    / %script{:src=>"http://hammerjs.github.io/dist/hammer-time.min.js"}
+    %script{:src=>"js/index-dist.js"}

@@ -1,0 +1,46 @@
+<style>
+  .portfolio {
+    / display: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .portfolio > img {
+    height: 100%;
+    // object-position: 50% 50%;
+    // object-fit: cover;
+    display:inline-block;
+    *display:inline;/* For IE7*/
+    *zoom:1;/* For IE7*/
+    vertical-align:top;
+   }
+</style>
+<section class="portfolio animated fadeIn">
+  <img src="http://withlovebani.com/res/img/whiteTwoPiece.jpg">
+  <img src="http://withlovebani.com/res/img/blue2Piece.jpg">
+  <img src="http://withlovebani.com/res/img/blackAndFlowers.jpg">
+  <img src="http://withlovebani.com/res/img/classyBlack.jpg">
+  <img src="http://withlovebani.com/res/img/colorfulFloweryDress.jpg">
+  <img src="http://withlovebani.com/res/img/facesDressWithoutSleeves.jpg">
+  <img src="http://withlovebani.com/res/img/facesDressWithSleeves.jpg">
+  <img src="http://withlovebani.com/res/img/flowery2Piece.jpg">
+  <img src="http://withlovebani.com/res/img/purpleTopYellowPants.jpg">
+  <img src="http://withlovebani.com/res/img/redAndBlackDress.jpg">
+  <img src="http://withlovebani.com/res/img/whiteAndBlue.jpg">
+</section>
+<script>
+  slideshow = window.setInterval(function() {
+    var xPos = $('.portfolio').scrollLeft(),
+          portfolio = document.getElementsByClassName('portfolio')[0],
+          maxScroll = portfolio.scrollWidth - portfolio.clientWidth;
+    if(xPos >= maxScroll) {
+      $('.portfolio').scrollLeft(0);
+    }
+    else {
+      $('.portfolio').scrollLeft(xPos + width/1000);
+    }
+  }, 20);
+  slideshow;
+</script>
