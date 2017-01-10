@@ -30,7 +30,7 @@ window.onhashchange = function(){
          beforeSend: function() {
             // $('.loading').css('display', 'block');
             // $('.main').css('display', 'none');
-            $('logo').toggleClass('animated pulse infinite');
+            $('.logo').toggleClass('animated pulse infinite');
          },
          error: function(xhr, textStatus, error) {
             $('.main').html(textStatus);
@@ -41,7 +41,7 @@ window.onhashchange = function(){
          complete: function(xhr, textStatus) {
             // $('.main').css('display', 'block');
             // $('.loading').css('display', 'none');
-            $('logo').toggleClass('pulse infinite');
+            $('.logo').toggleClass('pulse infinite');
          },
        });
     }
