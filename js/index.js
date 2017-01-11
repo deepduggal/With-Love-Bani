@@ -1,5 +1,5 @@
 var width = $('body').innerWidth(), 
-        slideshow;
+      slideshow;
 
 window.onhashchange = function(){
     var hash = document.location.hash, 

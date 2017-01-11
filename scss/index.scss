@@ -14,19 +14,27 @@ body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   
   nav {
-    height: 4rem;
+    height: 5rem;
     width: 100%;
+    border-top: 5px black solid;
     position: fixed;
     bottom: 0;
-    border-top: 5px black solid;
+    z-index: 1;
     text-align: center;
     background: #ecebeb;
     
-    h1 {
+    h1.logo {
       font-family: 'Pacifico', cursive;
+      font-size: 1.5rem;
+      margin-bottom: -0.75rem;
+    }
+    h5.subheading {
+      font-family: 'Pacifico', cursive;
+      font-size: 1rem;
+      margin-bottom: -0rem;
     }
     a {
-      // display: inline-block;
+      text-decoration: underline;
     }
     a:hover {
       cursor: pointer;
