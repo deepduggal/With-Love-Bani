@@ -31,7 +31,7 @@
   <img src="http://withlovebani.com/res/img/whiteAndBlue.jpg">
 </section>
 <script>
-  slideshow = window.setInterval(function() {
+  var slideshow = window.setInterval(function() {
     var xPos = $('.portfolio').scrollLeft(),
           portfolio = document.getElementsByClassName('portfolio')[0],
           maxScroll = portfolio.scrollWidth - portfolio.clientWidth;

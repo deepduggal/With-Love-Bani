@@ -1,5 +1,4 @@
-var width = $('body').innerWidth(), 
-      slideshow;
+var width = $('body').innerWidth();
 
 window.onhashchange = function(){
     var hash = document.location.hash, 
@@ -28,8 +27,8 @@ window.onhashchange = function(){
          type: "GET",
          dataType: "html",
          beforeSend: function() {
-            // $('.loading').css('display', 'block');
-            // $('.main').css('display', 'none');
+            $('.loading').css('display', 'block');
+            $('.main').css('display', 'none');
             $('.logo').toggleClass('animated pulse infinite');
          },
          error: function(xhr, textStatus, error) {
@@ -39,9 +38,11 @@ window.onhashchange = function(){
             $('.main').html(data);
          }, 
          complete: function(xhr, textStatus) {
-            // $('.main').css('display', 'block');
-            // $('.loading').css('display', 'none');
-            $('.logo').toggleClass('pulse infinite');
+            setTimeout(function() {
+              $('.main').css('display', 'block');
+              $('.loading').css('display', 'none');
+              $('.logo').toggleClass('pulse infinite');
+            }, 1000);
          },
        });
     }
@@ -59,20 +60,28 @@ $('nav').click(function(event) {
     if(document.location.hash !== '#about') {
         document.location.hash = '#about';
     }
-    clearInterval(slideshow);
+    if(slideshow) {
+      clearInterval(slideshow);
+    }
   }
   else if(event.target.id === 'contact') {
     //If new page is selected
     if(document.location.hash !== '#contact') {
         document.location.hash = '#contact';
     }
-    clearInterval(slideshow);
+    if(slideshow) {
+      clearInterval(slideshow);
+    }
+  }
+  else if(event.target.id === 'logo') {
+
   }
 })
 
 window.onload = function() {
   window.onhashchange();
 }
+
 // //Touch Events
 // var hammertime = new Hammer(myElement, myOptions);
 // hammertime.on('swipe', function(event) {

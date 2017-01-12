@@ -23,25 +23,24 @@
   
   }
   .about > .baniImg > img:hover {
-    -moz-transition: all 20s;
-    -webkit-transition: all 20s;
-    transition: all 20s;
+    -moz-transition: all 15s;
+    -webkit-transition: all 15s;
+    transition: all 15s;
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2); 
   }
   .about > .baniText {
-    height: 100%;
-    width: 50%;
+    height: calc(100% - 1rem);
+    width: calc(50% - 1rem);
     float: left;
     overflow: auto;
+    margin: 0.5rem;
   }
-  .about > .baniText > h1 {
-    margin: 0.5em;
-  }
-  .about > .baniText > h1 > em {
-      font-family: 'Pacifico', cursive;
+  .about > .baniText > .credits {
+    position: absolute;
+    bottom: 0.5rem;
   }
 </style>
 <section class="about animated fadeIn">
@@ -50,12 +49,17 @@
   </div>
   <div class="baniText">
     <h1>
-      <em>With Love, Bani</em>
-      <span>&nbsp;is a modern fashion agency that specializes in creating unique custom apparel solutions.</span>
-      <br>
-      <br>
-      <em>&nbsp;&nbsp;With Love, Bani</em>
-      <span>&nbsp;was created by Bani Duggal.</span>
+      <div class="logo">With Love, Bani</div>
+      <span>&nbsp;is a modern fashion agency that specializes in creating unique custom apparel solutions with a focus on bespoke couture and high-end fashion.</span>
     </h1>
+    <div class="credits">
+      <h3>
+        <span>Clothing design by Bani Duggal (pictured).</span>
+      </h3>
+      <h4>
+        <span>Website by</span>
+        <a href="http://deepduggal.me">Deep Duggal.</a>
+      </h4>
+    </div>
   </div>
 </section>

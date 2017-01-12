@@ -7,11 +7,16 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
+.logo {
+  display: inline-block;
+  font-family: 'Pacifico', cursive;
+  font-style: italic;
+}
 
 //CSS
 body {
   // tabindex: 0;
-  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-family: 'Archivo Narrow', Helvetica, Arial, sans-serif;
   
   nav {
     height: 5rem;
@@ -24,7 +29,6 @@ body {
     background: #ecebeb;
     
     h1.logo {
-      font-family: 'Pacifico', cursive;
       font-size: 1.5rem;
       margin-bottom: -0.75rem;
     }
@@ -53,7 +57,7 @@ body {
       left: 0;
       z-index: 1;
       font-family: 'Pacifico';
-      height: calc(100% - 4rem - 5px);
+      height: calc(100% - 5rem - 5px);
       width: 100%;
       background: white;
       
@@ -72,8 +76,8 @@ body {
     }
   .main {
     position: fixed;
-    bottom: calc(4rem + 5px);
-    height: calc(100% - 4rem - 5px);
+    bottom: calc(5rem + 5px);
+    height: calc(100% - 5rem - 5px);
     width: 100%;
     overflow: hidden;
   }
