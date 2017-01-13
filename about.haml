@@ -23,9 +23,9 @@
 
   }
   .about > .baniImg > img:hover {
-    -moz-transition: all 15s;
-    -webkit-transition: all 15s;
-    transition: all 15s;
+    -moz-transition: all 20s;
+    -webkit-transition: all 20s;
+    transition: all 20s;
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -38,6 +38,9 @@
     overflow: auto;
     margin: 0.5rem;
   }
+  .about > .baniText > h3, .about > .baniText > h2 {
+    display: inline;
+  }
   .about > .baniText > .credits {
     position: absolute;
     bottom: 0.5rem;
@@ -46,9 +49,8 @@
   .baniImg
     %img{:src=>"res/img/about_bani.jpg", :alt=>"Bani Duggal, creator of With Love, Bani"}
   .baniText
-    %h1
-      .logo With Love, Bani
-      %span &nbsp;is a modern fashion brand that specializes in bespoke couture and high-end fashion. 
+    %h2.logo With Love, Bani
+    %h3 &nbsp;is a modern fashion brand that specializes in bespoke couture and high-end fashion. 
     .credits
       %h3
         %span Clothing design by Bani Duggal (pictured).
