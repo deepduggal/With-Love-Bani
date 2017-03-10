@@ -1,0 +1,65 @@
+:css
+  .about {
+    height: 100%;
+    width: 100%;
+  }
+  .about > .baniImg {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+  }
+  .about > .baniImg > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 7.5%;
+    -moz-transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+
+  }
+  .about > .baniImg > img:hover {
+    -moz-transition: all 20s;
+    -webkit-transition: all 20s;
+    transition: all 20s;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2); 
+  }
+  .about > .baniText {
+    height: calc(100% - 1rem);
+    width: calc(50% - 1rem);
+    float: left;
+    overflow: auto;
+    margin: 0.5rem;
+  }
+  .about > .baniText > h3, .about > .baniText > h2 {
+    display: inline;
+  }
+  .about > .baniText > .credits {
+    position: absolute;
+    bottom: 0.5rem;
+  }
+%section.about.animated.fadeIn
+  .baniImg
+    %img{:src=>"res/img/about_bani.jpg", :alt=>"Bani Duggal, creator of With Love, Bani"}
+  .baniText
+    %h2.logo With Love, Bani
+    %h3
+      &nbsp;specializes in creating one of a kind, bespoke clothing, as well as offering personal styling services. The designs pictured are all unique pieces available to order and customize according to each client’s specific measurements. Each piece will be different in some way, and completely one of a kind, so nobody has to share their special outfit with anyone else!  
+      %br
+      %br
+      In addition to designing outfits,&nbsp;
+      %span.logo With Love, Bani
+      %span &nbsp;helps clients express their individual style by putting together their own head to toe looks. The photographs displayed on the site are an example of this. Each image has been styled in a way to enhance the design, highlight the model wearing it, and create a specific “look.” Similarly, clients can receive personalized attention in creating their own looks based on their individual needs. These services include putting together head to toe looks for special events, pulling pieces from clients’ existing wardrobe for everyday outfits, and personal shopping!
+    .credits
+      %h3
+        %span Clothing design by Bani Duggal (pictured).
+      %h4
+        %span Website by
+        %a{:href=>"http://deepduggal.me"} Deep Duggal. 

@@ -1,0 +1,61 @@
+:css
+  .contact {
+    height: calc(100% - 1em);
+    width: calc(100% - 1em);
+    padding: 0.5em;
+    background: white;
+    float: left;
+
+  }
+  .contact > form h1 {
+    min-height: 1em;
+    width: 3em;
+    margin: 0.5em 50% 0 calc(50% - 1.5em);
+    padding: 0.25em;
+    border-radius: 5px;
+    float: left;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Lobster';
+  }
+  .contact > form input, .contact > form textarea {
+    min-height: 1em;
+    width: 75%;
+    margin: 0.5em 12.5% 0 12.5%;
+    padding: 0.25em;
+    border-radius: 5px;
+    border: 2px black solid;
+    float: left;
+    background: black;
+    font-family: 'Lobster';
+    font-size: 1.5rem;
+    color: white;
+    outline: none;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+  }
+  .contact > form input:focus, .contact > form input:active, .contact > form textarea:focus, .contact > form textarea:active {
+    border: 2px black solid;
+    background: white;
+    color: black;
+  }
+  .contact > form input[type="submit"] {
+    border: 2px black solid;
+    background: white;
+    color: black;
+  }
+  .contact > form input[type="submit"]:hover {
+    background: black;
+    color: white;
+  }
+.contact.animated.fadeIn
+  %form{:action=>"https://www.enformed.io/h0wzgkch", :method=>"POST", :autocomplete=>"off"}
+    %h1 Contact
+    %input{:type=>"text", :name=>"Name", :value=>"", :placeholder=>"Name"}
+    %input{:type=>"text", :name=>"Email", :value=>"", :placeholder=>"Email"}
+    %textarea{:type=>"text", :name=>"Message", :value=>"", :placeholder=>"Message"}
+    %input{:type=>"submit", :name=>"Submit", :value=>"Submit"}
+    %input{:name => "*honeypot", :type => "hidden"}
+    %input{:name => "*subject", :type => "hidden", :value => "With Love, Bani - Contact Form"}
+    %input{:name => "*reply", :type => "hidden", :value => "withlovebani@gmail.com"}

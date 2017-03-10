@@ -1,0 +1,66 @@
+<style>
+  .about {
+    height: 100%;
+    width: 100%;
+  }
+  .about > .baniImg {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+  }
+  .about > .baniImg > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 7.5%;
+    -moz-transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  
+  }
+  .about > .baniImg > img:hover {
+    -moz-transition: all 20s;
+    -webkit-transition: all 20s;
+    transition: all 20s;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2); 
+  }
+  .about > .baniText {
+    height: calc(100% - 1rem);
+    width: calc(50% - 1rem);
+    float: left;
+    overflow: auto;
+    margin: 0.5rem;
+  }
+  .about > .baniText > h3, .about > .baniText > h2 {
+    display: inline;
+  }
+  .about > .baniText > .credits {
+    position: absolute;
+    bottom: 0.5rem;
+  }
+</style>
+<section class="about animated fadeIn">
+  <div class="baniImg">
+    <img alt="Bani Duggal, creator of With Love, Bani" src="res/img/about_bani.jpg">
+  </div>
+  <div class="baniText">
+    <h2 class="logo">With Love, Bani</h2>
+    <h3>&nbsp;is a modern fashion brand that specializes in bespoke couture and high-end fashion.</h3>
+    <div class="credits">
+      <h3>
+        <span>Clothing design by Bani Duggal (pictured).</span>
+      </h3>
+      <h4>
+        <span>Website by</span>
+        <a href="http://deepduggal.me">Deep Duggal.</a>
+      </h4>
+    </div>
+  </div>
+</section>
