@@ -4,9 +4,6 @@
     width: 100%;
   }
   .about > .baniImg {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
     width: 50%;
     overflow: hidden;
@@ -25,7 +22,7 @@
     transition: all 0.5s;
 
   }
-  .about > .baniImg:hover > img {
+  .about > .baniImg > img:hover {
     -moz-transition: all 20s;
     -webkit-transition: all 20s;
     transition: all 20s;
@@ -35,36 +32,18 @@
     transform: scale(1.2); 
   }
   .about > .baniText {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: calc(100% - 2rem);
-    width: calc(50% - 2rem);
+    height: calc(100% - 1rem);
+    width: calc(50% - 1rem);
     float: left;
     overflow: auto;
-    margin: 1rem;
+    margin: 0.5rem;
   }
   .about > .baniText > h3, .about > .baniText > h2 {
     display: inline;
   }
-  .about > .baniImg > .credits {
+  .about > .baniText > .credits {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 1rem;
-    margin: 0 1rem 1rem 0;
-    background: white;
-  }
-  @media (max-width: 786px) {
-    .about > .baniText h3, .about > .baniText h2  {
-      font-size: 1rem;
-    }
-    .about > .baniImg > .credits > h3 {
-      font-size: 1rem;
-    }
-    .about > .baniImg > .credits > h4 {
-    
-    }
+    bottom: 0.5rem;
   }
 #fb-root
   :javascript
@@ -78,13 +57,6 @@
 %section.about.animated.fadeIn
   .baniImg
     %img{:src=>"res/img/about_bani.jpg", :alt=>"Bani Duggal, creator of With Love, Bani"}
-    .credits
-      .fb-like{"data-action" => "like", "data-href" => "https://www.facebook.com/WithLoveBani/", "data-layout" => "standard", "data-share" => "true", "data-show-faces" => "true", "data-size" => "small", "data-width" => "100px"}
-      %h3
-        %span Clothing design by Bani Duggal (pictured).
-      %h4
-        %span Website by
-        %a{:href=>"http://deepduggal.me"} Deep Duggal. 
   .baniText
     %h2.logo With Love, Bani
     %h3
@@ -94,3 +66,10 @@
       In addition to designing outfits,&nbsp;
       %span.logo With Love, Bani
       %span &nbsp;helps clients express their individual style by putting together their own head to toe looks. The photographs displayed on the site are an example of this. Each image has been styled in a way to enhance the design, highlight the model wearing it, and create a specific “look.” Similarly, clients can receive personalized attention in creating their own looks based on their individual needs. These services include putting together head to toe looks for special events, pulling pieces from clients’ existing wardrobe for everyday outfits, and personal shopping!
+    .credits
+      .fb-like{"data-action" => "like", "data-href" => "https://www.facebook.com/WithLoveBani/", "data-layout" => "standard", "data-share" => "true", "data-show-faces" => "true", "data-size" => "large", "data-width" => "100px"}
+      %h3
+        %span Clothing design by Bani Duggal (pictured).
+      %h4
+        %span Website by
+        %a{:href=>"http://deepduggal.me"} Deep Duggal. 
