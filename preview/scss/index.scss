@@ -7,6 +7,9 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
+* {
+  box-sizing: border-box;
+}
 .logo {
   font-family: 'Lobster', cursive;
   font-style: italic;
@@ -14,14 +17,15 @@ h1, h2, h3, h4, h5, h6 {
 
 //CSS
 body {
-  // tabindex: 0;
   font-family: Georgia, Times, 'Times New Roman', serif;
   
   nav {
-    height: 4rem;
+    height: 5.75rem;
     width: 100%;
-    border-top: 5px black solid;
+    padding: 0.5rem;
+    border-top: 0.25rem black solid;
     position: fixed;
+    left: 0;
     bottom: 0;
     z-index: 1;
     text-align: center;
@@ -30,10 +34,11 @@ body {
     h1.logo {
       font-size: 1.5rem;
       margin-bottom: -0.3rem;
+      padding-bottom: 0.25rem;
     }
     h5.subheading {
-      // font-family: 'Lobster', cursive;
       font-size: 1rem;
+      padding-bottom: 0.25rem;
     }
     a {
       font-family: 'Lobster', cursive;
@@ -50,23 +55,22 @@ body {
     }
   }
   .loading {
+      height: calc(100% - 5rem - 5px);
+      width: 100%;
       display: none;
       position: fixed;
       top: 0;
       left: 0;
       z-index: 1;
-      font-family: 'Lobster';
-      height: calc(100% - 5rem - 5px);
-      width: 100%;
       background: white;
+      overflow: hidden;
       
       h1 {
         position: relative;
-        top: calc(50% - 1em);
-        left: calc(50% - 2.2em);
+        top: calc(50% - 4rem);
+        left: calc(50% - 8.8rem);
         width: 6.84em;
-        font-style: italic;
-        font-size: 4em;
+        font-size: 4rem;
         
         .text {
           float: left;
@@ -75,8 +79,8 @@ body {
     }
   .main {
     position: fixed;
-    bottom: calc(4rem + 5px);
-    height: calc(100% - 4rem - 5px);
+    top: 0;
+    height: calc(100% - 5.25rem);
     width: 100%;
     overflow: hidden;
   }
@@ -103,10 +107,3 @@ body {
   50% {display: none;}
   100% {display: block;}
 }
-
-/*
-  Show loading
-  //Do stuff
-  Hide Loading
-
-*/

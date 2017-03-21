@@ -12,8 +12,8 @@
     // object-position: 50% 50%;
     // object-fit: cover;
     display:inline-block;
-    *display:inline;/* For IE7*/
-    *zoom:1;/* For IE7*/
+    display:inline;
+    zoom:1;
     vertical-align:top;
    }
 %section.portfolio.animated.fadeIn
@@ -28,16 +28,3 @@
   %img{:src=>"res/img/purpleTopYellowPants.jpg"}
   %img{:src=>"res/img/redAndBlackDress.jpg"}
   %img{:src=>"res/img/whiteAndBlue.jpg"}
-:javascript
-  var slideshow = window.setInterval(function() {
-    var xPos = $('.portfolio').scrollLeft(),
-          portfolio = document.getElementsByClassName('portfolio')[0],
-          maxScroll = portfolio.scrollWidth - portfolio.clientWidth;
-    if(xPos >= maxScroll) {
-      $('.portfolio').scrollLeft(0);
-    }
-    else {
-      $('.portfolio').scrollLeft(xPos + width/1000);
-    }
-  }, 20);
-  slideshow;

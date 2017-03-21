@@ -1,4 +1,5 @@
-var width = $('body').innerWidth();
+var width = $('body').innerWidth();;
+var slideshow;
 
 window.onhashchange = function(){
     var hash = document.location.hash, 
@@ -36,6 +37,24 @@ window.onhashchange = function(){
          },
          success: function(data, textStatus, xhr) {
             $('.main').html(data);
+            if(link === 'portfolio.html') {
+
+              slideshow = window.setInterval(function() {
+                var xPos = $('.portfolio').scrollLeft(),
+                      portfolio = $('.portfolio')[0],
+                      maxScroll = portfolio.scrollWidth - portfolio.clientWidth;
+
+                //If reached end of scroll
+                if(xPos >= maxScroll) {
+                  $('.portfolio').scrollLeft(0);
+                }
+                //Scroll
+                else {
+                  $('.portfolio').scrollLeft(xPos + 1);
+                }
+              }, 20);
+
+            }//end
          }, 
          complete: function(xhr, textStatus) {
             setTimeout(function() {
@@ -48,15 +67,17 @@ window.onhashchange = function(){
     }
 }
 
+//Change hash
 $('nav').click(function(event) {
   event.preventDefault();
+
+  /* Set hash*/
   if(event.target.id === 'portfolio') {
     if(document.location.hash !== '#portfolio') {
         document.location.hash = '#portfolio';
     }
   }
   else if(event.target.id === 'about') {
-    //If new page is selected
     if(document.location.hash !== '#about') {
         document.location.hash = '#about';
     }
@@ -74,17 +95,12 @@ $('nav').click(function(event) {
     }
   }
   else if(event.target.id === 'logo') {
-
+    if(document.location.hash !== '#portfolio') {
+        document.location.hash = '#portfolio';
+    }
   }
-})
+});
 
 window.onload = function() {
   window.onhashchange();
-}
-
-// //Touch Events
-// var hammertime = new Hammer(myElement, myOptions);
-// hammertime.on('swipe', function(event) {
-//   $(event.target).scrollLeft($('body').innerWidth());
-// });
-// hammertime.get('swipe').set({direction: Hammer.DIRECTION_HORIZONTAL});
+};
