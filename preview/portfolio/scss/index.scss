@@ -1,0 +1,56 @@
+@import '../../scss-mixins/defaults', '../../scss-mixins/nav', '../../scss-mixins/loading';
+
+//CSS
+body {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  
+  .main {
+    position: fixed;
+    top: 0;
+    height: calc(100% - 5.25rem);
+    width: 100%;
+    overflow: hidden;
+
+    section.portfolio {
+      // display: none;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+
+      img {
+        height: 100%;
+        // object-position: 50% 50%;
+        // object-fit: cover;
+        display:inline-block;
+        display:inline;
+        zoom:1;
+        vertical-align:top;
+       }
+    }
+  }
+}
+
+
+//Animations
+@keyframes showLoading {
+  0% {/*Pause*/}
+  50% {display: none;}
+  100% {display: block;}
+}
+@keyframes hideLoading {
+  0% {/*Pause*/}
+  50% {display: none;}
+  100% {display: block;}
+}
+@keyframes showContent {
+  0% {}
+  50% {display: none;}
+  100% {display: block;}
+}
+@keyframes hideContent {
+  0% {}
+  50% {display: none;}
+  100% {display: block;}
+}

@@ -1,3 +1,4 @@
+!!!
 %html
   %head
     %meta{:charset => "UTF-8"}
@@ -24,14 +25,14 @@
     %title With Love Bani | Bespoke Couture and High-End Fashion Solutions
     %link{:href => "https://fonts.googleapis.com/css?family=Lobster", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => "css/index.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:rel=>"stylesheet", :href=>"css/index.css"}
   %body
     %nav
-      %h1.logo#logo With Love, Bani
+      .logo#logo With Love, Bani
       %h5.subheading Bespoke Couture & Personal Styling
-      %a#portfolio Portfolio
-      %a#about About
-      %a#contact Contact
+      %a{:href=>"http://withlovebani.com/preview/portfolio/"} Portfolio
+      %a{:href=>"http://withlovebani.com/preview/about/"} About
+      %a{:href=>"http://withlovebani.com/preview/contact/"} Contact
     %section.loading.logo
       %h1
         .text.animated.slideInLeft With&nbsp;
@@ -39,6 +40,15 @@
         %br
         .text.animated.slideInRight Bani
     .main.animated.fadeIn
+      %section.contact.animated.fadeIn
+        %form{:action=>"https://www.enformed.io/h0wzgkch", :method=>"POST", :autocomplete=>"off"}
+          %h1 Contact
+          %input{:type=>"text", :name=>"Name", :value=>"", :placeholder=>"Name"}
+          %input{:type=>"text", :name=>"Email", :value=>"", :placeholder=>"Email"}
+          %textarea{:type=>"text", :name=>"Message", :value=>"", :placeholder=>"Message"}
+          %input{:type=>"submit", :name=>"Submit", :value=>"Submit"}
+          %input{:name => "*honeypot", :type => "hidden"}
+          %input{:name => "*subject", :type => "hidden", :value => "With Love, Bani - Contact Form"}
+          %input{:name => "*reply", :type => "hidden", :value => "withlovebani@gmail.com"}
     %script{:src=>"js/jquery-3.1.1.min.js"}
     %script{:src=>"js/index.js"}
-    %script{:src => "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58c32abb34e38745", :type => "text/javascript"}
