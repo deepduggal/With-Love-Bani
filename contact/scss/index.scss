@@ -1,0 +1,55 @@
+@import '../../scss-mixins/defaults', '../../scss-mixins/nav', '../../scss-mixins/loading', '../../scss-mixins/alex-brush', '../../scss-mixins/source-sans-pro';
+
+body {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+.contact {
+  height: calc(100% - 1em);
+  width: calc(100% - 1em);
+  padding: 0.5em;
+  background: white;
+  float: left;
+}
+.contact > form h1 {
+  min-height: 1em;
+  width: 3em;
+  margin: 0.5em 50% 0 calc(50% - 1.5em);
+  padding: 0.25em;
+  border-radius: 5px;
+  float: left;
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'Source Sans Pro';
+}
+.contact > form input, .contact > form textarea {
+  min-height: 1em;
+  width: 75%;
+  margin: 0.5em 12.5% 0 12.5%;
+  padding: 0.25em;
+  border-radius: 5px;
+  border: 2px black solid;
+  float: left;
+  background: black;
+  font-family: 'Source Sans Pro';
+  font-size: 1.5rem;
+  color: white;
+  outline: none;
+  -moz-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.contact > form input:focus, .contact > form input:active, .contact > form textarea:focus, .contact > form textarea:active {
+  border: 2px black solid;
+  background: white;
+  color: black;
+}
+.contact > form input[type="submit"] {
+  border: 2px black solid;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+.contact > form input[type="submit"]:hover {
+  background: black;
+  color: white;
+}

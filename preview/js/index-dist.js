@@ -1,1 +1,0 @@
-var width=$("body").innerWidth(),slideshow;window.onload=function(){slideshow=window.setInterval(function(){var a=$(".portfolio").scrollLeft(),b=$(".portfolio")[0],c=b.scrollWidth-b.clientWidth;a>=c?$(".portfolio").scrollLeft(0):$(".portfolio").scrollLeft(a+1)},20)};

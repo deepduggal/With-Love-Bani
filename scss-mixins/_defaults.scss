@@ -1,0 +1,26 @@
+@mixin size($height: 100%, $width: 100%) {
+  height: $height;
+  width: $width;
+}
+@mixin transition($attr: all, $time: 0.2) {
+  -webkit-transition: $attr $time;
+  -moz-transition: $attr $time;
+  -o-transition: $attr $time;
+  transition: $attr $time;
+}
+
+//Default CSS that does not change for the entire website
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.logo {
+  font-family: 'Alex Brush', cursive;
+}

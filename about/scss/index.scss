@@ -1,0 +1,68 @@
+@import '../../scss-mixins/defaults', '../../scss-mixins/nav', '../../scss-mixins/loading', '../../scss-mixins/alex-brush', '../../scss-mixins/source-sans-pro';
+
+body {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+.about {
+  height: 100%;
+  width: 100%;
+}
+.about > .baniImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  float: left;
+
+  .credits {
+    position: absolute;
+    left: 1rem;
+    bottom: 4rem;
+    padding: 1rem;
+    margin: 0 1rem 1rem 0;
+    background: white;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 7.5%;
+  }
+}
+.about > .baniText {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: calc(100% - 2rem);
+  width: calc(50% - 2rem);
+  float: left;
+  overflow: auto;
+  margin: 1rem;
+
+  h1 {
+    text-decoration: underline;
+  }
+  .text  {
+    line-height: 150%;
+    font-size: 1.2rem;
+    color: #343434;
+
+    .logo {
+      font-weight: bold;
+      font-size: 125%;
+    }
+  }
+}
+@media (max-width: 786px) {
+  .about > .baniText .text  {
+    font-size: 1rem;
+  }
+  .about > .baniImg > .credits > h3 {
+    font-size: 1rem;
+  }
+  .about > .baniImg > .credits > h4 {
+  
+  }
+}

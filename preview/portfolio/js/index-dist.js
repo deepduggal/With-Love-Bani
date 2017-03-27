@@ -1,1 +1,0 @@
-var width=$("body").innerWidth(),slideshow=window.setInterval(function(){var o=$(".portfolio").scrollLeft(),l=$(".portfolio")[0];o>=l.scrollWidth-l.clientWidth?$(".portfolio").scrollLeft(0):$(".portfolio").scrollLeft(o+1)},20);
