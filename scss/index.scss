@@ -1,35 +1,51 @@
-@import '../scss-mixins/defaults', '../scss-mixins/nav', '../scss-mixins/loading', '../scss-mixins/alex-brush', '../scss-mixins/source-sans-pro';
+html,body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
 
-//CSS
 body {
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  background: #E91E63;
+  color: white;
+  font-family: Georgia, Helvetica, Arial, sans-serif;
   
-  .main {
-    position: fixed;
-    top: 0;
-    height: calc(100% - 5.25rem);
+  .comingSoon {
+    height: 100%;
     width: 100%;
-    overflow: hidden;
-
-    section.portfolio {
-      // display: none;
-      position: relative;
+    text-align: center;
+    
+    .text {
+      display: inline-block;
       height: 100%;
       width: 100%;
-      overflow: hidden;
-      white-space: nowrap;
+      background: -webkit-linear-gradient(top left, rgba(100, 100, 100, 0.5), rgba(0, 0, 0, 0.7));
+      
+      h1 {
+        margin: 0;
+        font-size: 3rem;
+        font-size: 4vw;
 
-      img {
-        height: 100%;
-        display:inline-block;
-        display:inline;
-        zoom:1;
-        vertical-align:top;
-        @include transition(all, 0.3s);
+        .logo {
+          font-family: 'Lobster', cursive;
+        }
       }
-      img:hover, img:focus {
-        -webkit-transform: scale(1.1, 1.1);
-        // @extend '.animated', '.infinite', '.bounceIn';
+      h3 {
+        position: absolute;
+        top: calc(50% - 1em);
+        left: calc(50% - 14.25em);
+        margin-top: 1rem;
+        line-height: 150%;
+        
+        .facebook {
+          color: white;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+        }
+        .facebook:hover {
+          color: #3b5998;
+        }
       }
     }
   }
