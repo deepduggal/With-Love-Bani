@@ -27,10 +27,6 @@ body {
         vertical-align:top;
         @include transition(all, 0.3s);
       }
-      img:hover, img:focus {
-        -webkit-transform: scale(1.1, 1.1);
-        // @extend '.animated', '.infinite', '.bounceIn';
-      }
     }
   }
 }
